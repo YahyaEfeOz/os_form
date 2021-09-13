@@ -33,5 +33,10 @@ namespace os_form
             calculator calculator = new calculator();
             calculator.Show();
         }
+
+        private void date_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

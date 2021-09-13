@@ -248,6 +248,7 @@
             this.entryBox.TabIndex = 24;
             this.entryBox.Text = "0";
             this.entryBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.entryBox.TextChanged += new System.EventHandler(this.entryBox_TextChanged);
             // 
             // btnMultiply
             // 

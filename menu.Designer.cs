@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.clock = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.btnRockgame = new System.Windows.Forms.Button();
@@ -54,22 +55,26 @@
             this.date.Size = new System.Drawing.Size(99, 20);
             this.date.TabIndex = 1;
             this.date.Text = "11 09 2021";
+            this.date.Click += new System.EventHandler(this.date_Click);
             // 
             // btnRockgame
             // 
-            this.btnRockgame.BackgroundImage = global::os_form.Properties.Resources.icon_game1;
+            this.btnRockgame.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRockgame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRockgame.BackgroundImage")));
             this.btnRockgame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRockgame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRockgame.Location = new System.Drawing.Point(184, 178);
             this.btnRockgame.Name = "btnRockgame";
             this.btnRockgame.Size = new System.Drawing.Size(64, 64);
             this.btnRockgame.TabIndex = 4;
-            this.btnRockgame.UseVisualStyleBackColor = true;
+            this.btnRockgame.UseVisualStyleBackColor = false;
             this.btnRockgame.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnDirectory
             // 
-            this.btnDirectory.BackgroundImage = global::os_form.Properties.Resources.directory;
+            this.btnDirectory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDirectory.BackgroundImage")));
             this.btnDirectory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDirectory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDirectory.Location = new System.Drawing.Point(114, 178);
             this.btnDirectory.Name = "btnDirectory";
             this.btnDirectory.Size = new System.Drawing.Size(64, 64);
@@ -78,8 +83,9 @@
             // 
             // btnCalculator
             // 
-            this.btnCalculator.BackgroundImage = global::os_form.Properties.Resources.icon_calculator;
+            this.btnCalculator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalculator.BackgroundImage")));
             this.btnCalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculator.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalculator.Location = new System.Drawing.Point(44, 178);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(64, 64);

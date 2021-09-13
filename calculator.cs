@@ -60,7 +60,8 @@ namespace os_form
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            entryBox.Text.Remove(entryBox.Text.Length - 1, 1); 
+          string delete = entryBox.Text.Substring(0, entryBox.Text.Length - 1);
+            entryBox.Text = delete;
         }
         private void btnClear_click(object sender, EventArgs e)
         {
@@ -98,6 +99,11 @@ namespace os_form
         {
             entryBox.Text = "!";
             
+        }
+
+        private void entryBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
