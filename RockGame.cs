@@ -40,9 +40,9 @@ namespace os_form
 
         private bool IsWin(string player, string bot)
         {
-            return (player == RockGameConstants.rock && bot == RockGameConstants.paper) ||
-                   (player == RockGameConstants.paper && bot == RockGameConstants.paper) || 
-                   (player == RockGameConstants.paper && bot == RockGameConstants.rock);
+            return (player == RockGameConstants.rock && bot == RockGameConstants.scissors) ||
+                   (player == RockGameConstants.paper && bot == RockGameConstants.rock) || 
+                   (player == RockGameConstants.scissors && bot == RockGameConstants.paper);
         }
     }
 }
