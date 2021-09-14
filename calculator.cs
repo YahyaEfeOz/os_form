@@ -60,9 +60,9 @@ namespace os_form
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-          if(entryBox.Text.Lenght == 1)
+          if(entryBox.Text.Length == 1)
           {
-               entryBox.Text = "0"
+              entryBox.Text = "0";
           }
           else
           {
