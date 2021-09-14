@@ -60,8 +60,15 @@ namespace os_form
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-          string delete = entryBox.Text.Substring(0, entryBox.Text.Length - 1);
-            entryBox.Text = delete;
+          if(entryBox.Text.Lenght == 1)
+          {
+               entryBox.Text = "0"
+          }
+          else
+          {
+               string delete = entryBox.Text.Substring(0, entryBox.Text.Length - 1);
+               entryBox.Text = delete;
+          }
         }
         private void btnClear_click(object sender, EventArgs e)
         {
