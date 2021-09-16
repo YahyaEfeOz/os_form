@@ -46,7 +46,8 @@
             this.entryBox = new System.Windows.Forms.TextBox();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnresult = new System.Windows.Forms.Button();
-            this.btn00 = new System.Windows.Forms.Button();
+            this.btnVirgule = new System.Windows.Forms.Button();
+            this.opelabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPlus
@@ -60,7 +61,7 @@
             this.btnPlus.TabIndex = 5;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            this.btnPlus.Click += new System.EventHandler(this.operation_Click);
             // 
             // btnMinus
             // 
@@ -73,7 +74,7 @@
             this.btnMinus.TabIndex = 6;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            this.btnMinus.Click += new System.EventHandler(this.operation_Click);
             // 
             // btnDivision
             // 
@@ -86,7 +87,7 @@
             this.btnDivision.TabIndex = 7;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = true;
-            this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
+            this.btnDivision.Click += new System.EventHandler(this.operation_Click);
             // 
             // btnClear
             // 
@@ -240,7 +241,7 @@
             // 
             // entryBox
             // 
-            this.entryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.entryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.entryBox.Location = new System.Drawing.Point(12, 86);
             this.entryBox.Multiline = true;
             this.entryBox.Name = "entryBox";
@@ -248,7 +249,6 @@
             this.entryBox.TabIndex = 24;
             this.entryBox.Text = "0";
             this.entryBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.entryBox.TextChanged += new System.EventHandler(this.entryBox_TextChanged);
             // 
             // btnMultiply
             // 
@@ -262,7 +262,7 @@
             this.btnMultiply.Text = "*";
             this.btnMultiply.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            this.btnMultiply.Click += new System.EventHandler(this.operation_Click);
             // 
             // btnresult
             // 
@@ -278,25 +278,35 @@
             this.btnresult.UseVisualStyleBackColor = false;
             this.btnresult.Click += new System.EventHandler(this.btnresult_Click);
             // 
-            // btn00
+            // btnVirgule
             // 
-            this.btn00.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn00.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.25F);
-            this.btn00.Location = new System.Drawing.Point(12, 383);
-            this.btn00.Name = "btn00";
-            this.btn00.Size = new System.Drawing.Size(68, 50);
-            this.btn00.TabIndex = 28;
-            this.btn00.Text = "00";
-            this.btn00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn00.UseVisualStyleBackColor = true;
-            this.btn00.Click += new System.EventHandler(this.number_Click);
+            this.btnVirgule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVirgule.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.25F);
+            this.btnVirgule.Location = new System.Drawing.Point(12, 383);
+            this.btnVirgule.Name = "btnVirgule";
+            this.btnVirgule.Size = new System.Drawing.Size(68, 50);
+            this.btnVirgule.TabIndex = 28;
+            this.btnVirgule.Text = ",";
+            this.btnVirgule.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVirgule.UseVisualStyleBackColor = true;
+            this.btnVirgule.Click += new System.EventHandler(this.number_Click);
+            // 
+            // opelabel
+            // 
+            this.opelabel.AutoSize = true;
+            this.opelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.opelabel.Location = new System.Drawing.Point(12, 58);
+            this.opelabel.Name = "opelabel";
+            this.opelabel.Size = new System.Drawing.Size(0, 25);
+            this.opelabel.TabIndex = 29;
             // 
             // calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 461);
-            this.Controls.Add(this.btn00);
+            this.Controls.Add(this.opelabel);
+            this.Controls.Add(this.btnVirgule);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.entryBox);
             this.Controls.Add(this.btn7);
@@ -341,6 +351,7 @@
         private System.Windows.Forms.TextBox entryBox;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnresult;
-        private System.Windows.Forms.Button btn00;
+        private System.Windows.Forms.Button btnVirgule;
+        private System.Windows.Forms.Label opelabel;
     }
 }

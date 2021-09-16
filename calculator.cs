@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace os_form
@@ -14,9 +7,7 @@ namespace os_form
     {
         double firstnum;
         string ope;
-        double secnum;
-        double result;
-
+        double secnum = 0;
         public calculator()       
         {
             InitializeComponent();
@@ -24,93 +15,75 @@ namespace os_form
         private void number_Click(object sender, EventArgs e)
         {
             Button number = (Button)sender;
-            if(entryBox.Text == "0")
-            entryBox.Text = number.Text;
+
+            if(entryBox.Text == "0" || secnum != 0)
+                entryBox.Text = number.Text;
             else
                 entryBox.Text += number.Text;
+
+            if (secnum != 0)
+            {
+                opelabel.Text = "";
+                firstnum = Convert.ToDouble(number.Text);
+            }
         }
         private void btnresult_Click(object sender, EventArgs e)
         {
-            secnum = Convert.ToDouble(entryBox.Text);
+            double result = 0;
+            if (secnum == 0)
+                secnum = Convert.ToDouble(entryBox.Text);
 
             if (ope == "+")
             {
-                result = (firstnum + secnum);
+                result = (secnum + firstnum);
                 entryBox.Text = Convert.ToString(result);
-                firstnum = result;
+                opelabel.Text += secnum+"=";
             }
             else if (ope == "-")
             {
                 result = (firstnum - secnum);
                 entryBox.Text = Convert.ToString(result);
-                firstnum = result;
+                opelabel.Text += secnum + "=";
             }
             else if (ope == "/")
             {
                 result = (firstnum / secnum);
                 entryBox.Text = Convert.ToString(result);
-                firstnum = result;
+                opelabel.Text += secnum + "=";
             }
             else if (ope == "*")
             {
                 result = (firstnum * secnum);
                 entryBox.Text = Convert.ToString(result);
-                firstnum = result;
+                opelabel.Text += secnum + "=";
             }
+            opelabel.Text = firstnum + ope + secnum + "=";
+            firstnum = result;
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-          if(entryBox.Text.Length == 1)
-          {
-              entryBox.Text = "0";
-          }
-          else
-          {
-               string delete = entryBox.Text.Substring(0, entryBox.Text.Length - 1);
-               entryBox.Text = delete;
-          }
+            if (entryBox.Text.Length == 1)
+            {
+                entryBox.Text = "0";
+            }
+            else
+            {
+                 entryBox.Text = entryBox.Text.Substring(0, entryBox.Text.Length - 1);
+            }
         }
         private void btnClear_click(object sender, EventArgs e)
         {
+            opelabel.Text = "";
             entryBox.Text = "0";
         }
-        private void btnPlus_Click(object sender, EventArgs e)
+        private void operation_Click(object sender, EventArgs e)
         {
+            Button oper = (Button)sender;
             firstnum = Convert.ToDouble(entryBox.Text);
+            opelabel.Text = firstnum + oper.Text;
             entryBox.Text = "0";
-            ope = "+";
-        }
-
-        private void btnDivision_Click(object sender, EventArgs e)
-        {
-            firstnum = Convert.ToDouble(entryBox.Text);
-            entryBox.Text = "0";
-            ope = "/";
-        }
-
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-            firstnum = Convert.ToDouble(entryBox.Text);
-            entryBox.Text = "0";
-            ope = "-";
-        }
-
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-            firstnum = Convert.ToDouble(entryBox.Text);
-            entryBox.Text = "0";
-            ope = "*";
-        }
-
-        private void btnFac_Click(object sender, EventArgs e)
-        {
-            entryBox.Text = "!";
-            
-        }
-
-        private void entryBox_TextChanged(object sender, EventArgs e)
-        {
-
+            ope = Convert.ToString(oper.Text);
+            secnum = 0;
         }
     }
 }

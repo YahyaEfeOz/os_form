@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace os_form
 {
     static class RockGameConstants
@@ -29,11 +28,11 @@ namespace os_form
             }
             else if (IsWin(hand, handList[botHandIndex]))
             {
-                message += "\n Kazandınız";
+                message += "\nKazandınız";
             }
             else
             {
-                message += "\n Kaybettiniz";
+                message += "\nKaybettiniz";
             }
             return message;
         }

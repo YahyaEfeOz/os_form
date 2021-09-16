@@ -19,7 +19,7 @@ namespace os_form
 
         private void menu_Load(object sender, EventArgs e)
         {
-
+            timer1.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -35,6 +35,16 @@ namespace os_form
         }
 
         private void date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            clock.Text = Convert.ToString(DateTime.Now);
+        }
+
+        private void btnDirectory_Click(object sender, EventArgs e)
         {
 
         }
