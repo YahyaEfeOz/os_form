@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
+    "",
+    "\\os_form-main"
+  ],
+  "SelectedNode": "\\os_form-main\\os_form.sln",
+=======
     ""
   ],
   "SelectedNode": "\\os_form.sln",
+>>>>>>> c2afb899b54f93029ab591b53bd30dff187ce19d
   "PreviewInSolutionExplorer": false
 }
