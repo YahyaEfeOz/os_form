@@ -1,6 +1,6 @@
 ﻿namespace os_form
 {
-    partial class calculator
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -45,9 +45,9 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.entryBox = new System.Windows.Forms.TextBox();
             this.btnMultiply = new System.Windows.Forms.Button();
-            this.btnresult = new System.Windows.Forms.Button();
+            this.btnResult = new System.Windows.Forms.Button();
             this.btnVirgule = new System.Windows.Forms.Button();
-            this.opelabel = new System.Windows.Forms.Label();
+            this.opeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPlus
@@ -264,19 +264,19 @@
             this.btnMultiply.UseVisualStyleBackColor = true;
             this.btnMultiply.Click += new System.EventHandler(this.operation_Click);
             // 
-            // btnresult
+            // btnResult
             // 
-            this.btnresult.BackColor = System.Drawing.SystemColors.InfoText;
-            this.btnresult.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnresult.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnresult.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.25F);
-            this.btnresult.Location = new System.Drawing.Point(162, 383);
-            this.btnresult.Name = "btnresult";
-            this.btnresult.Size = new System.Drawing.Size(125, 50);
-            this.btnresult.TabIndex = 4;
-            this.btnresult.Text = "=";
-            this.btnresult.UseVisualStyleBackColor = false;
-            this.btnresult.Click += new System.EventHandler(this.btnresult_Click);
+            this.btnResult.BackColor = System.Drawing.SystemColors.InfoText;
+            this.btnResult.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResult.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.25F);
+            this.btnResult.Location = new System.Drawing.Point(162, 383);
+            this.btnResult.Name = "btnResult";
+            this.btnResult.Size = new System.Drawing.Size(125, 50);
+            this.btnResult.TabIndex = 4;
+            this.btnResult.Text = "=";
+            this.btnResult.UseVisualStyleBackColor = false;
+            this.btnResult.Click += new System.EventHandler(this.btnresult_Click);
             // 
             // btnVirgule
             // 
@@ -291,21 +291,21 @@
             this.btnVirgule.UseVisualStyleBackColor = true;
             this.btnVirgule.Click += new System.EventHandler(this.number_Click);
             // 
-            // opelabel
+            // opeLabel
             // 
-            this.opelabel.AutoSize = true;
-            this.opelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.opelabel.Location = new System.Drawing.Point(12, 58);
-            this.opelabel.Name = "opelabel";
-            this.opelabel.Size = new System.Drawing.Size(0, 25);
-            this.opelabel.TabIndex = 29;
+            this.opeLabel.AutoSize = true;
+            this.opeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.opeLabel.Location = new System.Drawing.Point(12, 58);
+            this.opeLabel.Name = "opeLabel";
+            this.opeLabel.Size = new System.Drawing.Size(0, 25);
+            this.opeLabel.TabIndex = 29;
             // 
-            // calculator
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 461);
-            this.Controls.Add(this.opelabel);
+            this.Controls.Add(this.opeLabel);
             this.Controls.Add(this.btnVirgule);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.entryBox);
@@ -324,8 +324,8 @@
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnPlus);
-            this.Controls.Add(this.btnresult);
-            this.Name = "calculator";
+            this.Controls.Add(this.btnResult);
+            this.Name = "Calculator";
             this.Text = "Hesap Makinesi";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -350,8 +350,8 @@
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.TextBox entryBox;
         private System.Windows.Forms.Button btnMultiply;
-        private System.Windows.Forms.Button btnresult;
+        private System.Windows.Forms.Button btnResult;
         private System.Windows.Forms.Button btnVirgule;
-        private System.Windows.Forms.Label opelabel;
+        private System.Windows.Forms.Label opeLabel;
     }
 }

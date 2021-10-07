@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SQLite;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace os_form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu());
+            Application.Run(new Menu());
         }
     }
 }

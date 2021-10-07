@@ -1,6 +1,6 @@
 ﻿namespace os_form
 {
-    partial class menu
+    partial class Menu
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.clock = new System.Windows.Forms.Label();
             this.btnRockgame = new System.Windows.Forms.Button();
             this.btnDirectory = new System.Windows.Forms.Button();
             this.btnCalculator = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnWeatherForecast = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clock
@@ -53,19 +54,19 @@
             this.btnRockgame.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRockgame.BackgroundImage")));
             this.btnRockgame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRockgame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRockgame.Location = new System.Drawing.Point(184, 178);
+            this.btnRockgame.Location = new System.Drawing.Point(151, 237);
             this.btnRockgame.Name = "btnRockgame";
             this.btnRockgame.Size = new System.Drawing.Size(64, 64);
             this.btnRockgame.TabIndex = 4;
             this.btnRockgame.UseVisualStyleBackColor = false;
-            this.btnRockgame.Click += new System.EventHandler(this.button3_Click);
+            this.btnRockgame.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnDirectory
             // 
             this.btnDirectory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDirectory.BackgroundImage")));
             this.btnDirectory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDirectory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDirectory.Location = new System.Drawing.Point(114, 178);
+            this.btnDirectory.Location = new System.Drawing.Point(151, 167);
             this.btnDirectory.Name = "btnDirectory";
             this.btnDirectory.Size = new System.Drawing.Size(64, 64);
             this.btnDirectory.TabIndex = 3;
@@ -77,28 +78,41 @@
             this.btnCalculator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCalculator.BackgroundImage")));
             this.btnCalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCalculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalculator.Location = new System.Drawing.Point(44, 178);
+            this.btnCalculator.Location = new System.Drawing.Point(81, 167);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(64, 64);
             this.btnCalculator.TabIndex = 2;
             this.btnCalculator.UseVisualStyleBackColor = true;
-            this.btnCalculator.Click += new System.EventHandler(this.button1_Click);
+            this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // menu
+            // btnWeatherForecast
+            // 
+            this.btnWeatherForecast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnWeatherForecast.BackgroundImage")));
+            this.btnWeatherForecast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnWeatherForecast.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWeatherForecast.Location = new System.Drawing.Point(81, 237);
+            this.btnWeatherForecast.Name = "btnWeatherForecast";
+            this.btnWeatherForecast.Size = new System.Drawing.Size(64, 64);
+            this.btnWeatherForecast.TabIndex = 5;
+            this.btnWeatherForecast.UseVisualStyleBackColor = true;
+            this.btnWeatherForecast.Click += new System.EventHandler(this.btnWeatherForecast_Click);
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(299, 461);
+            this.Controls.Add(this.btnWeatherForecast);
             this.Controls.Add(this.btnRockgame);
             this.Controls.Add(this.btnDirectory);
             this.Controls.Add(this.btnCalculator);
             this.Controls.Add(this.clock);
-            this.Name = "menu";
+            this.Name = "Menu";
             this.Text = "OS";
             this.Load += new System.EventHandler(this.menu_Load);
             this.ResumeLayout(false);
@@ -113,6 +127,7 @@
         private System.Windows.Forms.Button btnDirectory;
         private System.Windows.Forms.Button btnRockgame;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnWeatherForecast;
     }
 }
 

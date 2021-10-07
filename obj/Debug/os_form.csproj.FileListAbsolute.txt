@@ -35,3 +35,14 @@ C:\Users\Efe\Desktop\os_form\os_form-main\obj\Debug\os_form.csproj.CoreCompileIn
 C:\Users\Efe\Desktop\os_form\os_form-main\obj\Debug\os_form.exe
 C:\Users\Efe\Desktop\os_form\os_form-main\obj\Debug\os_form.pdb
 C:\Users\Efe\Desktop\os_form\os_form-main\obj\Debug\os_form.Directory.resources
+C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.Directory.resources
+C:\Users\Efe\Desktop\os_form\bin\Debug\EntityFramework.dll
+C:\Users\Efe\Desktop\os_form\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Efe\Desktop\os_form\bin\Debug\System.Data.SQLite.dll
+C:\Users\Efe\Desktop\os_form\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Efe\Desktop\os_form\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Efe\Desktop\os_form\bin\Debug\EntityFramework.xml
+C:\Users\Efe\Desktop\os_form\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Efe\Desktop\os_form\bin\Debug\System.Data.SQLite.xml
+C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.csproj.CopyComplete
+C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.Weather_Forecast.resources

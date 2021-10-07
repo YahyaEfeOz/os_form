@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace os_form
 {
-    public partial class menu : Form
+    public partial class Menu : Form
     {
-        public menu()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -22,23 +22,6 @@ namespace os_form
             timer1.Enabled = true;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Game game = new Game ();
-            game.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            calculator calculator = new calculator();
-            calculator.Show();
-        }
-
-        private void date_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             clock.Text = Convert.ToString(DateTime.Now);
@@ -46,7 +29,26 @@ namespace os_form
 
         private void btnDirectory_Click(object sender, EventArgs e)
         {
+            Directory directory = new Directory();
+            directory.Show();
+        }
 
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            Calculator calculator = new Calculator();
+            calculator.Show();
+        }
+
+        private void btnGame_Click(object sender, EventArgs e)
+        {
+            Game game = new Game();
+            game.Show();
+        }
+
+        private void btnWeatherForecast_Click(object sender, EventArgs e)
+        {
+            Weather_Forecast weather_Forecast = new Weather_Forecast();
+            weather_Forecast.Show();
         }
     }
 }

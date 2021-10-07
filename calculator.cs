@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace os_form
 {
-    public partial class calculator : Form
+    public partial class Calculator : Form
     {
-        double firstnum;
-        string ope;
-        double secnum = 0;
-        public calculator()       
+        double firstNumber;
+        string operation;
+        double secondNUmber = 0;
+        public Calculator()       
         {
             InitializeComponent();
         }      
@@ -16,49 +16,49 @@ namespace os_form
         {
             Button number = (Button)sender;
 
-            if(entryBox.Text == "0" || secnum != 0)
+            if(entryBox.Text == "0" || secondNUmber != 0)
                 entryBox.Text = number.Text;
             else
                 entryBox.Text += number.Text;
 
-            if (secnum != 0)
+            if (secondNUmber != 0)
             {
-                opelabel.Text = "";
-                firstnum = Convert.ToDouble(number.Text);
+                opeLabel.Text = "";
+                firstNumber = Convert.ToDouble(number.Text);
             }
         }
         private void btnresult_Click(object sender, EventArgs e)
         {
             double result = 0;
-            if (secnum == 0)
-                secnum = Convert.ToDouble(entryBox.Text);
+            if (secondNUmber == 0)
+                secondNUmber = Convert.ToDouble(entryBox.Text);
 
-            if (ope == "+")
+            if (operation == "+")
             {
-                result = (secnum + firstnum);
+                result = (secondNUmber + firstNumber);
                 entryBox.Text = Convert.ToString(result);
-                opelabel.Text += secnum+"=";
+                opeLabel.Text += secondNUmber+"=";
             }
-            else if (ope == "-")
+            else if (operation == "-")
             {
-                result = (firstnum - secnum);
+                result = (firstNumber - secondNUmber);
                 entryBox.Text = Convert.ToString(result);
-                opelabel.Text += secnum + "=";
+                opeLabel.Text += secondNUmber + "=";
             }
-            else if (ope == "/")
+            else if (operation == "/")
             {
-                result = (firstnum / secnum);
+                result = (firstNumber / secondNUmber);
                 entryBox.Text = Convert.ToString(result);
-                opelabel.Text += secnum + "=";
+                opeLabel.Text += secondNUmber + "=";
             }
-            else if (ope == "*")
+            else if (operation == "*")
             {
-                result = (firstnum * secnum);
+                result = (firstNumber * secondNUmber);
                 entryBox.Text = Convert.ToString(result);
-                opelabel.Text += secnum + "=";
+                opeLabel.Text += secondNUmber + "=";
             }
-            opelabel.Text = firstnum + ope + secnum + "=";
-            firstnum = result;
+            opeLabel.Text = firstNumber + operation + secondNUmber + "=";
+            firstNumber = result;
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -73,17 +73,17 @@ namespace os_form
         }
         private void btnClear_click(object sender, EventArgs e)
         {
-            opelabel.Text = "";
+            opeLabel.Text = "";
             entryBox.Text = "0";
         }
         private void operation_Click(object sender, EventArgs e)
         {
             Button oper = (Button)sender;
-            firstnum = Convert.ToDouble(entryBox.Text);
-            opelabel.Text = firstnum + oper.Text;
+            firstNumber = Convert.ToDouble(entryBox.Text);
+            opeLabel.Text = firstNumber + oper.Text;
             entryBox.Text = "0";
-            ope = Convert.ToString(oper.Text);
-            secnum = 0;
+            operation = Convert.ToString(oper.Text);
+            secondNUmber = 0;
         }
     }
 }
