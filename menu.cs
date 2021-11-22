@@ -47,8 +47,8 @@ namespace os_form
 
         private void btnWeatherForecast_Click(object sender, EventArgs e)
         {
-            Weather_Forecast weather_Forecast = new Weather_Forecast();
-            weather_Forecast.Show();
+            WeatherForecast weatherForecast = new WeatherForecast();
+            weatherForecast.Show();
         }
     }
 }

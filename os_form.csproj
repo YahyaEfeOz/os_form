@@ -67,14 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSet.cs">
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Directory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +99,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RockGame.cs" />
-    <Compile Include="Weather Forecast.cs">
+    <Compile Include="WeatherForecast.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Weather Forecast.Designer.cs">
-      <DependentUpon>Weather Forecast.cs</DependentUpon>
+    <Compile Include="WeatherForecast.Designer.cs">
+      <DependentUpon>WeatherForecast.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Directory.resx">
       <DependentUpon>Directory.cs</DependentUpon>
@@ -130,21 +122,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Weather Forecast.resx">
-      <DependentUpon>Weather Forecast.cs</DependentUpon>
+    <EmbeddedResource Include="WeatherForecast.resx">
+      <DependentUpon>WeatherForecast.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataBase\directory.db" />
-    <None Include="DataSet.xsc">
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet.xss">
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </None>
+    <None Include="Data\directory.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,9 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
