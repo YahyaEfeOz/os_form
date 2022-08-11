@@ -47,7 +47,7 @@
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnResult = new System.Windows.Forms.Button();
             this.btnVirgule = new System.Windows.Forms.Button();
-            this.opeLabel = new System.Windows.Forms.Label();
+            this.lblOperation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPlus
@@ -276,7 +276,7 @@
             this.btnResult.TabIndex = 4;
             this.btnResult.Text = "=";
             this.btnResult.UseVisualStyleBackColor = false;
-            this.btnResult.Click += new System.EventHandler(this.btnresult_Click);
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // btnVirgule
             // 
@@ -291,21 +291,21 @@
             this.btnVirgule.UseVisualStyleBackColor = true;
             this.btnVirgule.Click += new System.EventHandler(this.number_Click);
             // 
-            // opeLabel
+            // lblOperation
             // 
-            this.opeLabel.AutoSize = true;
-            this.opeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.opeLabel.Location = new System.Drawing.Point(12, 58);
-            this.opeLabel.Name = "opeLabel";
-            this.opeLabel.Size = new System.Drawing.Size(0, 25);
-            this.opeLabel.TabIndex = 29;
+            this.lblOperation.AutoSize = true;
+            this.lblOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblOperation.Location = new System.Drawing.Point(12, 58);
+            this.lblOperation.Name = "lblOperation";
+            this.lblOperation.Size = new System.Drawing.Size(0, 25);
+            this.lblOperation.TabIndex = 29;
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 461);
-            this.Controls.Add(this.opeLabel);
+            this.Controls.Add(this.lblOperation);
             this.Controls.Add(this.btnVirgule);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.entryBox);
@@ -352,6 +352,6 @@
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnResult;
         private System.Windows.Forms.Button btnVirgule;
-        private System.Windows.Forms.Label opeLabel;
+        private System.Windows.Forms.Label lblOperation;
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -18,12 +12,12 @@ namespace os_form
             InitializeComponent();
         }
 
-        static string _connectionString = @"Data Source=C:\Users\Efe\Desktop\os_form\Data\directory.db";
-        SQLiteConnection connection = new SQLiteConnection(_connectionString);
+        static string connectionString = @"Data Source=C:\Users\Efe\Desktop\os_form\Data\directory.db";
+        SQLiteConnection connection = new SQLiteConnection(connectionString);
 
 
         private DataTable dataTable()
-        {
+        {   
             DataTable dataTable = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter("Select * From guide", connection);
             adapter.Fill(dataTable);

@@ -14,20 +14,20 @@ namespace os_form
         }      
         private void number_Click(object sender, EventArgs e)
         {
-            Button number = (Button)sender;
+            Button numberButtons = (Button)sender;
 
             if(entryBox.Text == "0" || secondNUmber != 0)
-                entryBox.Text = number.Text;
+                entryBox.Text = numberButtons.Text;
             else
-                entryBox.Text += number.Text;
+                entryBox.Text += numberButtons.Text;
 
             if (secondNUmber != 0)
             {
-                opeLabel.Text = "";
-                firstNumber = Convert.ToDouble(number.Text);
+                lblOperation.Text = "";
+                firstNumber = Convert.ToDouble(numberButtons.Text);
             }
         }
-        private void btnresult_Click(object sender, EventArgs e)
+        private void btnResult_Click(object sender, EventArgs e)
         {
             double result = 0;
             if (secondNUmber == 0)
@@ -37,27 +37,27 @@ namespace os_form
             {
                 result = (secondNUmber + firstNumber);
                 entryBox.Text = Convert.ToString(result);
-                opeLabel.Text += secondNUmber+"=";
+                lblOperation.Text += secondNUmber+"=";
             }
             else if (operation == "-")
             {
                 result = (firstNumber - secondNUmber);
                 entryBox.Text = Convert.ToString(result);
-                opeLabel.Text += secondNUmber + "=";
+                lblOperation.Text += secondNUmber + "=";
             }
             else if (operation == "/")
             {
                 result = (firstNumber / secondNUmber);
                 entryBox.Text = Convert.ToString(result);
-                opeLabel.Text += secondNUmber + "=";
+                lblOperation.Text += secondNUmber + "=";
             }
             else if (operation == "*")
             {
                 result = (firstNumber * secondNUmber);
                 entryBox.Text = Convert.ToString(result);
-                opeLabel.Text += secondNUmber + "=";
+                lblOperation.Text += secondNUmber + "=";
             }
-            opeLabel.Text = firstNumber + operation + secondNUmber + "=";
+            lblOperation.Text = firstNumber + operation + secondNUmber + "=";
             firstNumber = result;
         }
         private void btnDelete_Click(object sender, EventArgs e)
@@ -73,14 +73,14 @@ namespace os_form
         }
         private void btnClear_click(object sender, EventArgs e)
         {
-            opeLabel.Text = "";
+            lblOperation.Text = "";
             entryBox.Text = "0";
         }
         private void operation_Click(object sender, EventArgs e)
         {
             Button oper = (Button)sender;
             firstNumber = Convert.ToDouble(entryBox.Text);
-            opeLabel.Text = firstNumber + oper.Text;
+            lblOperation.Text = firstNumber + oper.Text;
             entryBox.Text = "0";
             operation = Convert.ToString(oper.Text);
             secondNUmber = 0;

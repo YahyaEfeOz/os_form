@@ -46,3 +46,4 @@ C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.csproj.CopyComplete
 C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.exe
 C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.pdb
 C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.WeatherForecast.resources
+C:\Users\Efe\Desktop\os_form\obj\Debug\os_form.Date.resources

@@ -83,7 +83,6 @@
             this.messageLabel.Size = new System.Drawing.Size(187, 25);
             this.messageLabel.TabIndex = 3;
             this.messageLabel.Text = "Seçiminizi Yapınız";
-            this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
             // 
             // Game
             // 
@@ -96,7 +95,6 @@
             this.Controls.Add(this.rock);
             this.Name = "Game";
             this.Text = "Game";
-            this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -40,6 +40,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,13 +120,13 @@
             this.dataGrid.Location = new System.Drawing.Point(12, 141);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(631, 261);
+            this.dataGrid.Size = new System.Drawing.Size(500, 273);
             this.dataGrid.TabIndex = 10;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(471, 107);
+            this.btnSave.Location = new System.Drawing.Point(356, 107);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.TabIndex = 6;
@@ -135,7 +136,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(552, 107);
+            this.btnDelete.Location = new System.Drawing.Point(437, 107);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 28);
             this.btnDelete.TabIndex = 11;
@@ -145,7 +146,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(471, 73);
+            this.button1.Location = new System.Drawing.Point(356, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 28);
             this.button1.TabIndex = 12;
@@ -153,11 +154,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(350, 50);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Directory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 426);
+            this.ClientSize = new System.Drawing.Size(524, 426);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGrid);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
